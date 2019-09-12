@@ -9,7 +9,7 @@ module.exports = {
     {
       use: '@gridsome/source-graphql',
       options: {
-        url: 'https://d5814109.ngrok.io/api',
+        url: process.env.CRAFT_API_URL,
         fieldName: 'craft',
         typeName: 'craft',
 
