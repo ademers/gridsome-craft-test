@@ -9,7 +9,7 @@ module.exports = {
     {
       use: '@gridsome/source-graphql',
       options: {
-        url: process.env.CRAFT_API_URL,
+        url: 'http://craft33.test/api',
         fieldName: 'craft',
         typeName: 'craft',
 
