@@ -18,7 +18,7 @@
     <h2>Latest blog posts from Craft 3.3.x GraphQL API</h2>
     <ul>
       <li v-for="entry in $page.craft.entries" :key="entry.id">
-        <b>{{ entry.title }} </b> <i>on</i> {{ entry.dateCreated }}
+        <b>{{ entry.title }} </b> <i>on</i> {{ entry.dateCreated }} <i>by</i> {{ entry.author.firstName }} {{ entry.author.lastName }}
       </li>
     </ul>
   </Layout>
@@ -30,6 +30,10 @@ query {
     entries {
       title
       dateCreated
+      author {
+        firstName
+        lastName
+      }
     }
   }
 }
