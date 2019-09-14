@@ -18,8 +18,28 @@ module.exports = {
         },
       },
     },
+
+    {
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        tailwindConfig: 'tailwind.config.js',
+        purgeConfig: {},
+        presetEnvConfig: {},
+        shouldPurge: true,
+        shouldImport: true,
+        shouldTimeTravel: true,
+      }
+    },
+    
+    {
+      use: '@gridsome/plugin-critical',
+      options: {
+        paths: ['/'],
+        width: 1300,
+        height: 900
+      }
+    },    
   ],
 }
-
 
 
